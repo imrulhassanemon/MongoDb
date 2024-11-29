@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./App.css";
+import toast from "react-hot-toast";
 
 function App() {
   const handelAddUser = (e) => {
@@ -22,7 +23,7 @@ function App() {
         form.reset()
         console.log(data);
         if(data.insertedId){
-          alert('Users added Successfully')
+          toast.success('Users added Successfully')
         }
       });
   };
